@@ -7,6 +7,8 @@ import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import {ThemeContextProvider} from './components/context/ThemeContextProvider';
 import { Box } from './components/context/Box';
+import { UserContextProvider } from './components/context/User/UserContext';
+import { User } from './components/context/User/User';
 
 function App() {
   const personName = {
@@ -40,6 +42,11 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+
+
+      <UserContextProvider>
+        <User/>
+      </UserContextProvider>
     </div>
   );
 }
