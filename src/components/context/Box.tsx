@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import {ThemeContext} from "./ThemeContextProvider"
 export const Box = () => {
+  const theme = useContext(ThemeContext)
   return (
-    <>
-    Theme context
-    </>
+   <div style={{backgroundColor: theme.primary.main, color: theme.primary.text}}>
+     macka
+
+   </div>
   );
 }

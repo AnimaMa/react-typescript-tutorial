@@ -5,6 +5,8 @@ import { LoggedIn } from './components/LoggedIn';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import {ThemeContextProvider} from './components/context/ThemeContextProvider';
+import { Box } from './components/context/Box';
 
 function App() {
   const personName = {
@@ -29,11 +31,15 @@ function App() {
 
   return (
     <div className="App">
-      <Greet name="MACICKA" messageCount={4} isLoggedIn={false} />
+      <Greet name="test" messageCount={4} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList}/>
       <Status status="loading"/> 
       <LoggedIn/>
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
