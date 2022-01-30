@@ -8,7 +8,7 @@ type AuthUser = {
 
 export const User = () => {
 
-  const [user, setUser] = useState<AuthUser | null>(null)
+  const [user, setUser] = useState<AuthUser | null>(null) //useState future value
 
   const handleLogin = () => {
     setUser({
